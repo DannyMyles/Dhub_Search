@@ -14,4 +14,7 @@ export class ProfileService {
   console.log("service is now ready");
    this.username ='DannyaMyles'
   }
+  getProfileInfo(){
+    return this.http.get("https://api.github.com/users/DannyMyles")
+  }
 }
