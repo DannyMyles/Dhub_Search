@@ -1,13 +1,12 @@
-import { Url } from "url";
 
 export class User {
   login:String;
   bio:String;
-  avata:Url
+  avatar_url:string
 
-  constructor(login:String, bio:String, avata:Url){
+  constructor(login:String, bio:String, avata:string){
     this.bio = bio;
     this.login = login;
-    this.avata = avata;
+    this.avatar_url = avata;
   }
 }
