@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
   private username!: string;
-  private clientid = '1279d7ec943e647e717e'
-  private clientsecret = '1271fce86f453086ae073f7a83f4f5af7f95dca5'
+  private clientid = environment.clientid
+  private clientsecret = environment.clientsecret
 
   constructor(private http:HttpClient) {
   console.log("service is now ready");
@@ -18,4 +19,9 @@ export class ProfileService {
     return this.http.get("https://api.github.com/users/" + username +"?client_id"+ this.clientid + "&client_secret" + this.clientsecret)
     .toPromise();
   }
+  getRepositories(url:string){
+    return this.http.get( url +"?client_id"+ this.clientid + "&client_secret" + this.clientsecret)
+    .toPromise();
+  }
 }
+
