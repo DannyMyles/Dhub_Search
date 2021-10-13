@@ -11,6 +11,7 @@ import { ProfileService } from 'src/services/profile.service';
 export class ProfileComponent implements OnInit {
 
   user!:User;
+  active = 1;
 
   constructor(private route:ActivatedRoute, private  profileservice:ProfileService) { }
 
