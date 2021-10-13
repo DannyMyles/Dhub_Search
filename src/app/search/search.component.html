@@ -1,6 +1,6 @@
 <div class="container">
 <div class="d-flex flex-colum h-100 justify-content-center align-items-center">
-  <form [formGroup]="searchForm" class="d-flex align-self-center p-3 w-100">
+  <form [formGroup]="searchForm" (submit)= "search($event)" class="d-flex align-self-center p-3 w-100">
     <div class="flex-fill">
       <input class="form-control" type="text" formControlName="search">
     </div>

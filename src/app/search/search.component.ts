@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -12,14 +13,17 @@ export class SearchComponent implements OnInit {
     search: new FormControl("")
   })
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   search (evt:any){
-  evt.preventDefualt();
-  const username= this.searchForm.get('search')?.value
-  }
+    evt.preventDefault();
+    const username= this.searchForm.get('search')?.value
+    console.log(username)
+    this.router.navigate(["/profile",username])
+    }
+
 
 }
