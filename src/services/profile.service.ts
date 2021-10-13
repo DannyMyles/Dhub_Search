@@ -8,6 +8,6 @@ import 'rxjs/add/operator/map';
   providedIn: 'root'
 })
 export class ProfileService {
-
-  constructor() { }
+private
+  constructor(private http:Http) { }
 }
