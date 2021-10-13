@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Repository } from 'src/app/repository';
 import { User } from 'src/app/user';
 import { ProfileService } from 'src/services/profile.service';
 
@@ -11,6 +12,7 @@ import { ProfileService } from 'src/services/profile.service';
 export class ProfileComponent implements OnInit {
 
   user!:User;
+  repositories!:Repository[];
   active = 1;
 
   constructor(private route:ActivatedRoute, private  profileservice:ProfileService) { }
@@ -21,6 +23,10 @@ export class ProfileComponent implements OnInit {
       this.profileservice.getProfileInfo(param.username).then((response:User)=>{
         console.log(response);
         this.user = response;
+        this.profileservice.getRepositories(response.repos_url).then((repositoryResponse:Repository[])=>{
+          console.log(repositoryResponse);
+          this.repositories = repositoryResponse;
+        })
       })
     })
   }

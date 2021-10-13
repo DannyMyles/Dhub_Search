@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators'
+import { Repository } from 'src/app/repository';
+import { User } from 'src/app/user';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -15,12 +17,12 @@ export class ProfileService {
   console.log("service is now ready");
    this.username ='DannyaMyles'
   }
-  getProfileInfo(username:string):Promise<any>{
-    return this.http.get("https://api.github.com/users/" + username +"?client_id"+ this.clientid + "&client_secret" + this.clientsecret)
+  getProfileInfo(username:string):Promise<User>{
+    return this.http.get<User>("https://api.github.com/users/" + username +"?client_id"+ this.clientid + "&client_secret" + this.clientsecret)
     .toPromise();
   }
-  getRepositories(url:string){
-    return this.http.get( url +"?client_id"+ this.clientid + "&client_secret" + this.clientsecret)
+  getRepositories(url:string):Promise<Repository[]>{
+    return this.http.get<Repository[]>( url +"?client_id"+ this.clientid + "&client_secret" + this.clientsecret)
     .toPromise();
   }
 }

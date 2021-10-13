@@ -4,9 +4,11 @@ export class User {
   bio:String;
   avatar_url:string
   name:String;
-  company:String
-  followers:number
-  following:number
+  company:String;
+  followers:number;
+  following:number;
+  repos_url:string;
+
 
   constructor(login:String,
     bio:String,
@@ -14,7 +16,8 @@ export class User {
      name:String,
   company:String,
   followers:number,
-  following:number,){
+  following:number,
+  repos_url:string,){
     this.bio = bio;
     this.login = login;
     this.avatar_url = avata;
@@ -22,5 +25,6 @@ export class User {
     this.company=company;
     this.followers=followers;
     this.following=following;
+    this.repos_url=repos_url;
   }
 }

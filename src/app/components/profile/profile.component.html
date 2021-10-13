@@ -14,7 +14,7 @@
     <div class="flex-fill p-4">
       <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
         <li [ngbNavItem]="1">
-          <a ngbNavLink>One</a>
+          <a ngbNavLink>Overview</a>
           <ng-template ngbNavContent>
             <div class="row">
               <div class="col-md-3">
@@ -59,14 +59,21 @@
           </ng-template>
         </li>
         <li [ngbNavItem]="2">
-          <a ngbNavLink>Two</a>
+          <a ngbNavLink>Repositories</a>
           <ng-template ngbNavContent>
-            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-              helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-              8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-              stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+            <div class="repos">
+              <div class="row">
+                <div *ngFor="let repo of repositories" class="col-md-4 p-3">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{repo.name}}</h5>
+                    <p class="card-text">{{repo.description}}.</p>
+                    <!-- <a href="#" class="btn btn-primary">{{repo[]}}</a> -->
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
           </ng-template>
         </li>
       </ul>
