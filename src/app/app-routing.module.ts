@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { profile } from 'console';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SearchComponent } from './search/search.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:"/",
+    component:SearchComponent
+  },
+  {
+    path:"/profile/:username",
+    component:ProfileComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
