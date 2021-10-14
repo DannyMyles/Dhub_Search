@@ -1,8 +1,17 @@
 .container{
   height: 100vh;
-  /* width: 100vh; */
-  /* background-color: rgb(20, 221, 161); */
-  background-image: url(https://cdn.pixabay.com/photo/2019/11/30/21/37/stars-4664313__340.jpg);
+  background-image: url(https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
   background-size: cover;
   background-position: fixed;
+}
+.btn{
+  border: 2px solid #97935b
+}
+input{
+  box-shadow: black;
+}
+#tras{
+  background-color:transparent;
+  box-shadow: 5px 10px #050505;
+  color: #000;
 }

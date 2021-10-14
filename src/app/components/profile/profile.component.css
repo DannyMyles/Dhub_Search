@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 .repos{
   height: calc(100vh - 200px);
   overflow: hidden;
   overflow-y: auto;
   color: #000;
+  background-color: rgb(40, 46, 56);
+  font-weight: 800;
+
+}
+.card-body{
+  background-color: transparent;
+  font-style: italic;
 }
