@@ -1,5 +1,12 @@
 <div class="container">
-<div class="d-flex flex-colum h-100 justify-content-center align-items-center">
+<div class=" flex-colum h-100 justify-content-center align-items-center">
+  <div class="p-3  d-flex justify-content-center align-items-center ">
+    <h3>Welcome To Github Search</h3>
+  </div>
+    <div class="d-flex d-flex justify-content-center align-items-center ">
+      <p>The application helps you serch Github repositories</p>
+    </div>
+
   <form [formGroup]="searchForm" (submit)= "search($event)" class="d-flex align-self-center p-3 w-100">
     <div class="flex-fill">
       <input class="form-control" type="text" id="tras" formControlName="search">

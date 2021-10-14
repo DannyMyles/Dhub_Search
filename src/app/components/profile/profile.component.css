@@ -3,10 +3,10 @@
   height: calc(100vh - 200px);
   overflow: hidden;
   overflow-y: auto;
-  color: #000;
-  background-color: rgb(40, 46, 56);
+  color: rgb(0, 0, 0);
+  background-color:rgb(215, 235, 241);
   font-weight: 800;
-
+  box-shadow: transparent;
 }
 .card-body{
   background-color: transparent;
