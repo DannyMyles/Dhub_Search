@@ -1,4 +1,8 @@
 .container{
-  height: 300px;
-  background-color: rgb(20, 221, 161);
+  height: 100vh;
+  /* width: 100vh; */
+  /* background-color: rgb(20, 221, 161); */
+  background-image: url(https://cdn.pixabay.com/photo/2019/11/30/21/37/stars-4664313__340.jpg);
+  background-size: cover;
+  background-position: fixed;
 }

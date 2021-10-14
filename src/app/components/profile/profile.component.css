@@ -2,4 +2,5 @@
   height: calc(100vh - 200px);
   overflow: hidden;
   overflow-y: auto;
+  color: #000;
 }
