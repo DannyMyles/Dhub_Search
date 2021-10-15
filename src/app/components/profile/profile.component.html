@@ -9,10 +9,9 @@
       <img [src]="user.avatar_url" width="100%" class="rounded-circle">
 
       <h3>{{user.login}}</h3>
-      tab
     </div>
     <div class="flex-fill p-4">
-      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" id="overview">
         <li [ngbNavItem]="1">
           <a ngbNavLink>Overview</a>
           <ng-template ngbNavContent>

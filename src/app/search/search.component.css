@@ -1,8 +1,26 @@
 .container{
   height: 100vh;
-  /* background-color: rgb(20, 221, 161); */
   background-image: url(https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJhY2tncm91bmQlMjBpbWFnZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
   background-repeat:no-repeat ;
   background-size: cover;
 }
+.user{
+  color: rgb(167, 141, 59);
+}
+p{
+  font-size: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-style: italic;
+  justify-content: space-evenly;
+  text-align: center;
+}
+input{
+  box-shadow: black;
 
+}
+.welcome{
+  font-size: xx-large;
+  font-weight: 900;
+
+}
